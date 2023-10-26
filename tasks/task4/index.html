@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <script>
+        function getSecondsToTomorrow() {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const secondsToTomorrow = Math.floor((tomorrow - now) / 1000);
+            return secondsToTomorrow;
+        }
+        const secondsToTomorrow = getSecondsToTomorrow();
+        document.write("Завдання №4: Кількість секунд до завтра: " + secondsToTomorrow);
+    </script>
+</body>
+</html>

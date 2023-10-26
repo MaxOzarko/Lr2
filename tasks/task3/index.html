@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <script>
+        function getLastDayOfMonth(year, month) {
+            const lastDay = new Date(year, month + 1, 0).getDate();
+            return lastDay;
+        }
+
+        const year = 2020;
+        const month = 1;
+        const lastDay = getLastDayOfMonth(year, month);
+        document.write("Завдання №3: Останній день місяця: " + lastDay);
+    </script>
+</body>
+</html>

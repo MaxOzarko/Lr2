@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <script>
+        function getWeekDay(date) {
+            const daysOfWeek = ['НД', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+            return daysOfWeek[date.getDay()];
+        }
+        const date = new Date();
+        const weekDay = getWeekDay(date);
+        document.write("Завдання №2: Сьогодні: " + weekDay);
+    </script>
+</body>
+</html>

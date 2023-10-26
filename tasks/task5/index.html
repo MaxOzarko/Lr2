@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <script>
+        function formatDate(date) {
+            const now = new Date();
+            const timeDiff = now - date;
+            if (timeDiff < 1000) {
+                return "Зараз";
+            } else if (timeDiff < 60000) {
+                const seconds = Math.floor(timeDiff / 1000);
+                return seconds + " сек. назад";
+            } else if (timeDiff < 3600000) {
+                const minutes = Math.floor(timeDiff / 60000);
+                return minutes + " хв. назад";
+            } else {
+                const day = date.getDate().toString().padStart(2, '0');
+                const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                const year = date.getFullYear().toString().slice(-2);
+                const hours = date.getHours().toString().padStart(2, '0');
+                const minutes = date.getMinutes().toString().padStart(2, '0');
+                return day + "." + month + "." + year + " " + hours + ":" + minutes;
+            }
+        }
+        const date = new Date();
+        date.setMinutes(date.getMinutes() - 5); // Дата 5 хвилин тому
+        const formattedDate = formatDate(date);
+        document.write("Завдання №5: " + formattedDate);
+    </script>
+</body>
+</html>
